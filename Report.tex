@@ -1,4 +1,5 @@
 \documentclass{article}
+\usepackage[linkcolor=blue]{hyperref}
 \usepackage{graphicx}
 \usepackage{subfigure}
 \usepackage{longtable}
@@ -10,8 +11,9 @@
 \usepackage{minipage-marginpar}
 \usepackage{float}
 \geometry{bottom=2.5cm}
+
 \begin{document}
-\title{Rapid Prototyping Computer System Report\\Software Infrastructure Group}
+\title{Rapid Prototyping Computer System Report\newline Software Infrastructure Group\footnote{\href{https://github.com/HanxRen/PrototypeReport}{Web App Github}\newline \href{https://github.com/1163710214X/Binocular}{Android App Github}}}
 \author{Wanjun Xu, Wenjia Liu, Anjie Wang, Hanxiang Ren}
 \date{\today}
 \maketitle
@@ -121,13 +123,14 @@ Cloud Server is maintained by professional team, thus has better Security. Howev
 We designed various ends to fulfill different demand. We will first explain details of implementation for each function requirement, and then show interfaces of each end.
 
 \subsection{Login}
-Different users have different different levels of authority. Software stores user information in database, retrieve them when users login, finally redirect to different dashboard page based on their identity.
+Different users have different different levels of authority. Software stores user information in database, retrieve them when users login, finally redirect to different dashboard page based on their identity. Finally, some minor functions could be add to this page, such as remember password(As shown on \ref{fig1}).
 
- 	\begin{figure}[H] 	
+ 	\begin{figure}[H] 
  		\begin{minipage}[b]{0.28\linewidth}
 		 	\centering
-	 		\includegraphics{img/login2.png}
+	 		\includegraphics[width=\linewidth]{img/login2.png}
  			\caption{Android End}
+	 		\label{fig1}
  		\end{minipage}
  		\begin{minipage}[b]{0.68\linewidth} 		
  	 		\centering
